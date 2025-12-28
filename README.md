@@ -150,4 +150,13 @@ Exiting SSH terminal...
 
 ## License
 
+
 MIT License
+
+## WEB VERSİON
+<img width="1920" height="1040" alt="Glitch Console - Kişisel - Microsoft​ Edge 28 12 2025 16_15_20" src="https://github.com/user-attachments/assets/9e9ad0df-a5cf-4043-920a-9c3768c24271" /> 
+
+# TERMİNAL VERSİON
+
+<img width="1920" height="1080" alt="Filmler ve TV 28 12 2025 16_17_55" src="https://github.com/user-attachments/assets/6f169bee-891f-422c-9bf5-648ed12ffee2" />
+
