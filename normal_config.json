@@ -1,0 +1,11 @@
+{
+    "name": "normal",
+    "description": "Standard thread count for stealth",
+    "threads": 10,
+    "timeout": 10000,
+    "retries": 2,
+    "scan_intensity": "medium",
+    "stealth": true,
+    "ports": [22, 2222, 2200, 2022],
+    "delay_between_requests": 500
+}

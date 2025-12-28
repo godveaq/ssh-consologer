@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background-color: #0a0a0a;
+    color: #00ff41;
+    overflow-x: hidden;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.animated-text {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #00ff41;
+    text-shadow: 0 0 10px #00ff41;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        text-shadow:
+            0 0 4px #00ff41,
+            0 0 11px #00ff41,
+            0 0 19px #00ff41,
+            0 0 40px #079a4f,
+            0 0 80px #077e40,
+            0 0 90px #076836,
+            0 0 100px #07552c,
+            0 0 150px #07552c;
+    }
+    20%, 24%, 55% {
+        text-shadow: none;
+    }
+}
+
+.loading-bar {
+    width: 300px;
+    height: 20px;
+    background-color: #222;
+    border: 1px solid #00ff41;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.loading-progress {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, transparent, #00ff41, transparent);
+    transition: width 0.3s ease;
+}
+
+#loading-status {
+    color: #00ff41;
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+.main-app {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-app.hidden {
+    display: none;
+}
+
+.app-header {
+    background-color: #111;
+    border: 1px solid #00ff41;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-agent-display {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.user-agent-display #current-user-agent {
+    color: #00ff41;
+    font-weight: bold;
+}
+
+.input-section {
+    background-color: #111;
+    border: 1px solid #00ff41;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.input-section label {
+    display: block;
+    margin-bottom: 10px;
+    color: #00ff41;
+}
+
+.input-section input {
+    width: 100%;
+    padding: 10px;
+    background-color: #000;
+    border: 1px solid #00ff41;
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+    margin-bottom: 10px;
+}
+
+.input-section button {
+    background-color: #00ff41;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.input-section button:hover {
+    background-color: #00cc33;
+}
+
+.config-selector {
+    background-color: #111;
+    border: 1px solid #00ff41;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.config-selector h3 {
+    color: #00ff41;
+    margin-bottom: 15px;
+}
+
+.config-options {
+    display: flex;
+    gap: 20px;
+}
+
+.config-option {
+    flex: 1;
+    background-color: #000;
+    border: 1px solid #00ff41;
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.config-option:hover {
+    background-color: #222;
+}
+
+.config-option.selected {
+    background-color: #003300;
+    box-shadow: 0 0 10px #00ff41;
+}
+
+.config-option h4 {
+    color: #00ff41;
+    margin-bottom: 5px;
+}
+
+.config-option p {
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+.console-container {
+    background-color: #000;
+    border: 1px solid #00ff41;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.console-header {
+    background-color: #111;
+    padding: 10px 15px;
+    border-bottom: 1px solid #00ff41;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.console-header h3 {
+    color: #00ff41;
+}
+
+.console-header button {
+    background-color: #00ff41;
+    color: #000;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+.console-output {
+    height: 400px;
+    overflow-y: auto;
+    padding: 15px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.console-line {
+    margin-bottom: 5px;
+    white-space: pre-wrap;
+}
+
+.console-input {
+    display: flex;
+    padding: 10px 15px;
+    background-color: #111;
+    border-top: 1px solid #00ff41;
+}
+
+.prompt {
+    color: #00ff41;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.console-input input {
+    flex: 1;
+    background-color: transparent;
+    border: none;
+    color: #00ff41;
+    font-family: 'Courier New', monospace;
+    outline: none;
+    padding: 5px 0;
+}
+
+.connection-status {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.connection-success {
+    color: #00ff41;
+    font-weight: bold;
+}
+
+.error-message {
+    color: #ff5555;
+}
+
+.success-message {
+    color: #55ff55;
+}
+
+.info-message {
+    color: #5555ff;
+}
+
+.hidden {
+    display: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00ff41;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #00cc33;
+}

@@ -1,0 +1,11 @@
+{
+    "name": "aggressive",
+    "description": "High thread count for faster scanning",
+    "threads": 100,
+    "timeout": 5000,
+    "retries": 3,
+    "scan_intensity": "high",
+    "stealth": false,
+    "ports": [22, 2222, 2200, 2022],
+    "delay_between_requests": 10
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glitch Console</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <h1 class="animated-text">GLITCH CONSOLE</h1>
+            <div class="loading-bar">
+                <div class="loading-progress" id="loading-progress"></div>
+            </div>
+            <p id="loading-status">Initializing...</p>
+        </div>
+    </div>
+    
+    <div id="main-app" class="main-app hidden">
+        <header class="app-header">
+            <div class="header-content">
+                <h1>GLİTCH CONSOLE</h1>
+                <div class="user-agent-display">
+                    <span>User Agent: </span>
+                    <span id="current-user-agent">Loading...</span>
+                </div>
+            </div>
+        </header>
+        
+        <div class="input-section">
+            <label for="target-input">Enter URL or IP:</label>
+            <input type="text" id="target-input" placeholder="e.g., example.com or 192.168.1.1">
+            <button id="connect-btn">Connect</button>
+        </div>
+        
+        <div id="config-selector" class="config-selector hidden">
+            <h3>Select Scan Configuration:</h3>
+            <div class="config-options">
+                <div class="config-option" data-config="aggressive">
+                    <h4>Aggressive Scan</h4>
+                    <p>High thread count for faster scanning</p>
+                </div>
+                <div class="config-option" data-config="normal">
+                    <h4>Normal Scan</h4>
+                    <p>Standard thread count for stealth</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="console-container">
+            <div class="console-header">
+                <h3>Console Output</h3>
+                <button id="clear-console">Clear</button>
+            </div>
+            <div id="console-output" class="console-output">
+                <!-- Console output will appear here -->
+            </div>
+            <div class="console-input">
+                <span class="prompt" id="console-prompt">ssh-console:~$ </span>
+                <input type="text" id="console-command" placeholder="Enter command...">
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

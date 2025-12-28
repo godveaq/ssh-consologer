@@ -1,0 +1,17 @@
+{
+  "name": "glitch-console",
+  "version": "1.0.0",
+  "description": "A terminal application for connecting to SSH and console interfaces",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'Build process would compile C++ backend'"
+  },
+  "keywords": ["terminal", "ssh", "console", "glitch", "pentesting"],
+  "author": "Godveaq GLİTCH",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  }
+}
